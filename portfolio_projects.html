@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     PROJECTS INDEX — projects.html
+     Add a new project card by copying a .project-card block.
+     Each card should link to its own detail page (e.g. project-1.html).
+     Use project-template.html as a starting point for each detail page.
+============================================================ -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Keane Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">Keane <span>| Portfolio</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Projects</h1>
+      <p>GIS analysis, mapping, and planning work. Click any project to explore maps and methodology.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="project-grid">
+
+        <div class="project-card">
+          <div class="card-tag">QGIS &middot; Hawaii</div>
+          <h3>Project Title One</h3>
+          <p>Description of the project — what you analyzed, what tools you used, and what the key findings were.</p>
+          <div class="card-map-placeholder">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3L3 6v15l6-3 6 3 6-3V3l-6 3-6-3z"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+            Interactive map
+          </div>
+          <!-- Change href to your actual project detail page -->
+          <a href="project-template.html" class="card-link">View project &rarr;</a>
+        </div>
+
+        <div class="project-card">
+          <div class="card-tag">ArcGIS &middot; Analysis</div>
+          <h3>Project Title Two</h3>
+          <p>Description of the project — what you analyzed, what tools you used, and what the key findings were.</p>
+          <div class="card-map-placeholder">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3L3 6v15l6-3 6 3 6-3V3l-6 3-6-3z"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+            Interactive map
+          </div>
+          <a href="project-template.html" class="card-link">View project &rarr;</a>
+        </div>
+
+        <div class="project-card">
+          <div class="card-tag">GeoJSON &middot; Web Map</div>
+          <h3>Project Title Three</h3>
+          <p>Description of the project — what you analyzed, what tools you used, and what the key findings were.</p>
+          <div class="card-map-placeholder">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3L3 6v15l6-3 6 3 6-3V3l-6 3-6-3z"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+            Interactive map
+          </div>
+          <a href="project-template.html" class="card-link">View project &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Keane. Built for GitHub Pages.</p>
+      <div class="footer-links">
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
+
+<!-- ============================================================
+     SAVE THE SECTION BELOW AS: project-template.html
+     Duplicate this file for each new project (e.g. project-parking.html)
+     Replace all placeholder text with your actual project content.
+     To embed your map: export GeoJSON from QGIS/ArcGIS, save it in
+     a /data/ folder, and update the fetch() path in the <script> below.
+============================================================ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Name | Keane Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Leaflet.js for interactive maps -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">Keane <span>| Portfolio</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="project-detail-header">
+      <div class="card-tag" style="margin-bottom:0.5rem;">QGIS &middot; Hawaii</div>
+      <!-- Replace with your actual project title -->
+      <h1>Project Title Here</h1>
+      <p class="project-detail-meta">Year &middot; Tools Used &middot; Location</p>
+    </div>
+
+    <div class="project-detail-body">
+
+      <!-- Main content: description + map -->
+      <div class="project-main">
+        <h2 style="font-size:18px;color:#1b3a2d;margin-bottom:0.75rem;">Overview</h2>
+        <p style="color:#4a5e4a;font-size:15px;margin-bottom:1rem;">
+          <!-- Replace with your project overview -->
+          Describe the purpose and context of this project. What question were you trying to answer, and why does it matter?
+        </p>
+
+        <!-- ============================================================
+             INTERACTIVE MAP
+             To use your own data:
+             1. Export your layer as GeoJSON from QGIS (Layer > Export > Save Features As... > GeoJSON)
+             2. Save the file in a /data/ folder, e.g. data/my-project.geojson
+             3. Update the fetch() path in the script below
+             4. Customize the style and popup content as needed
+        ============================================================ -->
+        <div id="map" class="map-container"></div>
+
+        <h2 style="font-size:18px;color:#1b3a2d;margin:1.5rem 0 0.75rem;">Methodology</h2>
+        <p style="color:#4a5e4a;font-size:15px;margin-bottom:1rem;">
+          Describe the methods and workflow used — data sources, analysis steps, software, and any limitations.
+        </p>
+
+        <h2 style="font-size:18px;color:#1b3a2d;margin:1.5rem 0 0.75rem;">Key Findings</h2>
+        <p style="color:#4a5e4a;font-size:15px;">
+          Summarize the main results and what they mean for planners, policymakers, or the community.
+        </p>
+
+        <div style="margin-top:2rem;">
+          <a href="projects.html" class="btn btn-outline">&larr; All Projects</a>
+        </div>
+      </div>
+
+      <!-- Sidebar: project details -->
+      <div class="project-sidebar">
+        <div class="sidebar-card">
+          <h4>Tools</h4>
+          <ul>
+            <li>QGIS 3.x</li>
+            <li>Leaflet.js</li>
+            <li>GeoJSON</li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h4>Data Sources</h4>
+          <ul>
+            <li>Hawaii Statewide GIS</li>
+            <li><!-- Add more --></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h4>Year</h4>
+          <p>2024</p>
+        </div>
+        <!-- Optional: link to download data or report -->
+        <a href="#" class="btn btn-outline" download>Download Report</a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Keane. Built for GitHub Pages.</p>
+      <div class="footer-links">
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script>
+    // ============================================================
+    // LEAFLET MAP — Interactive map with GeoJSON overlay
+    // Default center: Maui, Hawaii. Change lat/lng/zoom as needed.
+    // ============================================================
+    const map = L.map('map').setView([20.8, -156.3], 10);
+
+    // Base tile layer (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      maxZoom: 19
+    }).addTo(map);
+
+    // ============================================================
+    // GeoJSON overlay — replace 'data/your-data.geojson' with your file
+    // Style and popup content can be customized below.
+    // ============================================================
+    fetch('data/your-data.geojson')
+      .then(res => res.json())
+      .then(data => {
+        L.geoJSON(data, {
+          style: {
+            color: '#2d6a4f',
+            weight: 2,
+            fillColor: '#52b788',
+            fillOpacity: 0.4
+          },
+          onEachFeature: (feature, layer) => {
+            // Customize popup content using your GeoJSON properties
+            if (feature.properties) {
+              layer.bindPopup(
+                '<strong>' + (feature.properties.name || 'Feature') + '</strong><br>' +
+                (feature.properties.description || '')
+              );
+            }
+          }
+        }).addTo(map);
+      })
+      .catch(() => {
+        // If no GeoJSON file is found, show a placeholder marker
+        L.marker([20.8, -156.3])
+          .addTo(map)
+          .bindPopup('<strong>Sample location</strong><br>Replace with your GeoJSON data.')
+          .openPopup();
+      });
+  </script>
+</body>
+</html>

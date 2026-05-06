@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     CONTACT PAGE — contact.html
+     Email obfuscation: your email is split into parts and assembled
+     by JavaScript at runtime. Bots scanning raw HTML won't find it.
+
+     TO SET YOUR EMAIL:
+     1. Open js/contact.js
+     2. Replace the three parts (u, d, t) with your actual email split:
+        e.g. for hello@example.com:
+          u = 'hello'
+          d = 'example'
+          t = 'com'
+============================================================ -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Keane Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">Keane <span>| Portfolio</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="writing.html">Writing</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact</h1>
+      <p>Feel free to reach out for collaboration, questions, or opportunities.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-box">
+        <h2>Get in Touch</h2>
+        <p>I'm open to planning roles, GIS projects, and research collaborations. The best way to reach me is by email.</p>
+
+        <div class="contact-row">
+          <span class="contact-label">Email</span>
+          <!-- Email is injected here by js/contact.js — do not put your address in the HTML -->
+          <span id="contact-email" style="color:#2d6a4f;font-weight:500;">Loading...</span>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-label">GitHub</span>
+          <!-- Replace # with your GitHub URL -->
+          <a href="#" target="_blank" rel="noopener">github.com/yourusername</a>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-label">LinkedIn</span>
+          <!-- Replace # with your LinkedIn URL -->
+          <a href="#" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-label">Location</span>
+          <span>Hawaii, USA</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Keane. Built for GitHub Pages.</p>
+      <div class="footer-links">
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
+
+
+<!-- ============================================================
+     SAVE THE SECTION BELOW AS: js/contact.js
+     This file assembles your email address at runtime from parts.
+     Split your email: yourname@domain.com → u='yourname', d='domain', t='com'
+     The address is never written as a plain string anywhere in the HTML or JS.
+============================================================ -->
+<script>
+// ============================================================
+// EMAIL OBFUSCATION
+// Replace u, d, and t with your actual email parts.
+// Example: for keane@hawaii.edu → u='keane', d='hawaii', t='edu'
+// ============================================================
+(function() {
+  var u = 'yourname';   // ← replace with your email username
+  var d = 'domain';     // ← replace with your email domain (no .com)
+  var t = 'com';        // ← replace with your TLD (com, edu, org, etc.)
+  var addr = u + '\u0040' + d + '\u002E' + t;
+  var el = document.getElementById('contact-email');
+  if (el) {
+    var a = document.createElement('a');
+    a.href = 'mailto:' + addr;
+    a.textContent = addr;
+    a.style.color = '#2d6a4f';
+    el.innerHTML = '';
+    el.appendChild(a);
+  }
+})();
+</script>
+
+
+<!-- ============================================================
+     SAVE THE SECTION BELOW AS: js/nav.js
+     Handles the mobile hamburger menu toggle.
+     This file is shared across all pages.
+============================================================ -->
+<script>
+// Mobile navigation toggle
+document.addEventListener('DOMContentLoaded', function() {
+  var toggle = document.querySelector('.nav-toggle');
+  var links  = document.querySelector('.nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      links.classList.toggle('open');
+    });
+    // Close menu when a link is clicked
+    links.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        links.classList.remove('open');
+      });
+    });
+  }
+});
+</script>
